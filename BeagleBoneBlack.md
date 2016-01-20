@@ -18,8 +18,13 @@ Filesystem                          Size   Used  Avail Capacity  iused    ifree 
 
 2) Write image to SD card:
 ```bash
+Unmount disk
+# sudo diskutil unmount $FILESYSTEM
+sudo diskutil unmount /dev/disk1s1
+
 # sudo dd bs=1 if=$PATH_TO_IMG of=$FILESYSTEM
 sudo dd bs=1 if=bone-debian-8.2-tester-2gb-armhf-2015-11-12-2gb.img of=/dev/disk1s1
+
 # monitor dd progress
 kill -INFO $(pgrep ^dd$) # OS X
 kill -USR1 $(pgrep ^dd$) # LINUX
