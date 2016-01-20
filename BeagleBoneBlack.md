@@ -26,8 +26,8 @@ sudo diskutil unmount /dev/disk1s1
 sudo dd bs=1 if=bone-debian-8.2-tester-2gb-armhf-2015-11-12-2gb.img of=/dev/disk1s1
 
 # monitor dd progress
-kill -INFO $(pgrep ^dd$) # OS X
-kill -USR1 $(pgrep ^dd$) # LINUX
+sudo kill -INFO $(pgrep ^dd$) # OS X
+sudo kill -USR1 $(pgrep ^dd$) # LINUX
 ```
 
 
